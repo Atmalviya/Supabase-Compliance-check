@@ -9,13 +9,20 @@ const app = express();
 
 // Configure CORS
 app.use(cors({
-  origin: 'https://supabase-compliance-check.atmalviya.cloud',
+  origin: [
+    'https://supabase-compliance-check.atmalviya.cloud',
+    'http://localhost:3000' // Keep local development working
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use(express.json());
+
+app.use('/', (req, res) => {
+  res.send('Hello World');
+});
 
 app.use('/api/auth', authRoutes);
 

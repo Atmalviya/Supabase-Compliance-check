@@ -99,7 +99,15 @@ router.post('/mfa/enable', async (req, res) => {
   }
 });
 
-router.options('/rls/enable', cors());
+router.options('/rls/enable', cors({
+  origin: [
+    'https://supabase-compliance-check.atmalviya.cloud',
+    'http://localhost:3000'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 router.post('/rls/enable', async (req, res) => {
   const { tableId } = req.body;
