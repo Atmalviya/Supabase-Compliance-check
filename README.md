@@ -14,7 +14,7 @@ A web application to help Supabase project administrators check and enhance thei
 ## Tech Stack
 
 ### Frontend
-- Next.js 13+ (React)
+- Next.js 15 (React)
 - Tailwind CSS
 - React Query
 - React Hot Toast
@@ -29,7 +29,7 @@ A web application to help Supabase project administrators check and enhance thei
 ## Local Development Setup
 
 ### Prerequisites
-- Node.js 16+
+- Node.js 20+
 - npm or yarn
 - A Supabase project
 - Google AI (Gemini) API key
