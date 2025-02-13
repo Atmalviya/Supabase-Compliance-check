@@ -20,7 +20,7 @@ app.use(cors({
 
 app.use(express.json());
 
-app.use('/', (req, res) => {
+app.use('/hello', (req, res) => {
   res.send('Hello World');
 });
 

@@ -1,5 +1,4 @@
-const API_URL = 'http://supabase-server.atmalviya.cloud';
-
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 let sessionToken = null;
 
 const getHeaders = () => {
