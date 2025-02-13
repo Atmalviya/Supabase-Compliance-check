@@ -9,7 +9,7 @@ const app = express();
 
 // Configure CORS
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://supabase-compliance-check.atmalviya.cloud',
+  origin: 'https://supabase-compliance-check.atmalviya.cloud',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
